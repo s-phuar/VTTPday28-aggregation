@@ -1,7 +1,5 @@
 package vttp.batch5.paf.day28.models;
 
-import jakarta.json.JsonObject;
-
 public class Comment {
 
    private String user; // user
@@ -22,17 +20,6 @@ public class Comment {
       return "Comment [user=" + user + ", rating=" + rating + ", text=" + text + "]";
    }
 
-
-   
-   public Comment(String user, int rating, String text) {
-      this.user = user;
-      this.rating = rating;
-      this.text = text;
-   }
-
-   public static Comment toComment(JsonObject jObj){
-      return new Comment(jObj.getString("user"), jObj.getInt("rating"), jObj.getString("c_text"));
-   }
 
 
 }

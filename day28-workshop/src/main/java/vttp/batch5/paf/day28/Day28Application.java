@@ -22,12 +22,10 @@ public class Day28Application implements CommandLineRunner{
 
 	@Override
 	public void run(String... args){
-		List<Document> results = bggRepository.findGamesAndComments("twilight");
-
-		for(Document d: results){
-			System.out.printf(">>> %d\n\n", d);
-		}
-
+		// List<Document> results = bggRepository.findGamesAndComments("twilight");
+		// for(Document d: results){
+		// 	System.out.printf(">>> %d\n\n", d);
+		// }
 	}
 
 }

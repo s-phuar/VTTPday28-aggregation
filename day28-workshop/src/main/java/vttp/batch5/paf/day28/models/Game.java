@@ -2,8 +2,6 @@ package vttp.batch5.paf.day28.models;
 
 import java.util.List;
 
-import jakarta.json.JsonObject;
-
 import java.util.LinkedList;
 
 public class Game {
@@ -38,19 +36,6 @@ public class Game {
    public String toString() {
       return "Game [gameId=" + gameId + ", name=" + name + ", ranking=" + ranking + "]";
    }
-
-   public Game(int gameId, String name, int ranking, String url, String image) {
-      this.gameId = gameId;
-      this.name = name;
-      this.ranking = ranking;
-      this.url = url;
-      this.image = image;
-   }
-
-   public static Game toGame(JsonObject jObj){
-      return new Game(jObj.getInt("gid"), jObj.getString("name"), jObj.getInt("ranking"), jObj.getString("url"), jObj.getString("image"));
-   }
-   
 
 
 }
